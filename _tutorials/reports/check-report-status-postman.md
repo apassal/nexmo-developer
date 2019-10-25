@@ -7,7 +7,7 @@ description: Check on the progress of your report
 
 Check if your report is ready by making a `GET` request to the URL specified in `href` (under `_links`) in the response to your [create report request](/reports/tutorials/create-report-using-graphical-tools/reports/create-report-postman#create-the-request).
 
-## Create the request
+## Create the get status request
 
 To make the request:
 
@@ -18,7 +18,7 @@ To make the request:
 
 ![Request the report status](/assets/images/reports-api/request-status-postman.png)
 
-## Execute the request
+## Execute the get status request
 
 Click the "Send" button. The `request_status` field in the response should contain either `PROCESSING` or `SUCCESS`. If it is `PROCESSING`, wait a few more minutes before repeating the same check status request.
 

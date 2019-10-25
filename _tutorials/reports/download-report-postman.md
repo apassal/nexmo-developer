@@ -7,7 +7,7 @@ description: Download your completed report
 
 When the report is ready (the `request_status` field in the check status request reads `SUCCESS`) you can download the report by making a `GET` request to the URL in the `download_report` field.
 
-## Create the request
+## Create the download request
 
 To make the request:
 
@@ -19,7 +19,7 @@ To make the request:
 ![Download the report](/assets/images/reports-api/download-report-postman.png)
 
 
-## Execute the request
+## Execute the download request
 
 Click the "Send" button. The response contains unreadable text, because the API returns a compressed CSV file.
 

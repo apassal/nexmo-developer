@@ -40,26 +40,11 @@ In the "Body" tab, enter the request body as shown below, replacing  `NEXMO_API_
 
 ### For an SMS report
 
-```json
-{
-    "account_id": "NEXMO_API_KEY",
-    "product": "SMS",
-    "direction": "outbound",
-    "date_start": "2019-04-01T00:00:00+0000",
-    "date_end": "2019-07-01T00:00:00+0000"
-}
-```
+![Create SMS report request](/assets/images/reports-api/create-request-body-sms-postman.png)
+
 ### For a Voice report
 
-```json
-{
-    "account_id": "NEXMO_API_KEY",
-    "product": "VOICE-CALL",
-    "direction": "outbound",
-    "date_start": "2019-04-01T00:00:00+0000",
-    "date_end": "2019-07-01T00:00:00+0000"
-}
-```
+![Create SMS report request](/assets/images/reports-api/create-request-body-voice-postman.png)
 
 > **Note**: The `product` must be one of `SMS`, `VOICE-CALL`, `VERIFY-API`, `NUMBER-INSIGHT`, `MESSAGES` or `CONVERSATION`.
 
