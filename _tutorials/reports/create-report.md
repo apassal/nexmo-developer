@@ -1,8 +1,9 @@
 ---
-title: Create a report
+title: Create a report using the command line
+description: In this step you learn how to create a report using the command line tool, curl.
 ---
 
-# Create a report
+# Create a Report
 
 To create a report, you send a `POST` request to `https://api.nexmo.com/v2/reports`. The parameters that you include in the request will determine which records are returned.
 
