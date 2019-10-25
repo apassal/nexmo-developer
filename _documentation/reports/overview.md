@@ -34,9 +34,10 @@ You can use the Reports API in a wide variety of use cases, including:
 * Verify API
 * Number Insight
 
-## Getting Started
+## Tutorials
 
-Learn how to [create and retrieve a report](/reports/tutorials/create-and-retrieve-a-report/)
+* [Create a report using the command line](/reports/tutorials/create-and-retrieve-a-report/)
+* [Create a report using a graphical tool](/reports/tutorials/create-report-using-graphical-tools)
 
 ## API Reference
 
