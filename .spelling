@@ -317,6 +317,6 @@ Xcode
 CocoaPods
 NPM
 Firebase
-Searchability
-register
+deregister
 unregister
+Searchability
