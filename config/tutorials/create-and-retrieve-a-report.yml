@@ -1,6 +1,6 @@
 ---
-title: Create and retrieve a report
-description: Gain insights in to your account by creating a report
+title: Create a report using the command line
+description: Create a report using the command line tool, curl.
 products:
   - reports
 
