@@ -212,23 +212,24 @@ module ApplicationHelper
     s.join('')
   end
 
+  def active_sidenav_item
+    if params[:tutorial_name]
+      "/#{params[:product]}/tutorials/#{params[:tutorial_name]}"
+    else
+      request.path.chomp("/#{params[:code_language]}")
+    end
+  end
+
   def output_link(item, title, options)
-    # Setup
-    active_path = request.path.chomp("/#{params[:code_language]}")
     if item[:external_link]
       url = item[:external_link]
     else
       url = path_to_url(item[:path])
       url = '/' + item[:product] + url if item[:is_task?]
     end
-    has_active_class = (url == active_path)
-
-    # Handle tasks
-    has_active_class = active_path.starts_with?(url) if @navigation == :tutorials
-
     # Output
     s = []
-    s << "<a class=\"Vlt-sidemenu__link #{has_active_class ? 'Vlt-sidemenu__link_active' : ''}\" href=\"#{url}\">"
+    s << "<a class=\"Vlt-sidemenu__link\" href=\"#{url}\">"
 
     if options['label']
       additional_classes = generate_label_classes(options['label'])
