@@ -21,3 +21,4 @@ tasks:
   - reports/create-report
   - reports/check-report-status
   - reports/download-report
+  - reports/reports-whats-next

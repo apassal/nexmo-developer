@@ -17,3 +17,4 @@ tasks:
   - reports/create-report-postman
   - reports/check-report-status-postman
   - reports/download-report-postman
+  - reports/reports-whats-next
