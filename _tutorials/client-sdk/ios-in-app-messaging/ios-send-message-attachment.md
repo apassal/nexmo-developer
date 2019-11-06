@@ -1,9 +1,9 @@
 ---
-title: Send an attachment
-description: In this step you learn how to send an attachment message.
+title: Send a message with attachment
+description: In this step you learn how to send a message with attachment.
 ---
 
-# Send an attachment message
+# Send a message with attachment
 
 You can use the conversation object to send attachments. The following example shows how to send an attachment in a conversation:
 
