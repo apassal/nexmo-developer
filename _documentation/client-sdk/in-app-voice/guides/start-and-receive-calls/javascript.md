@@ -5,6 +5,8 @@ language: javascript
 
 ## Overview
 
+> **NOTE:** A step-by-step tutorial to making a phone call from a web application is also available [here](/client-sdk/tutorials/app-to-phone/introduction). A step-by-step tutorial on receiving a phone call in your web application is also available [here](/client-sdk/tutorials/phone-to-app/introduction).
+
 This guide covers the functionalities in your Nexmo Client application, in order to make and receive in-app voice calls.
 
 Before you begin, make sure you [added the SDK to your app](/client-sdk/setup/add-sdk-to-your-app).
@@ -18,7 +20,7 @@ When your client app calls this method, the `answer_url` webhook that is configu
 On the client side, start the call as such:
 
 ```javascript
-new ConversationClient()
+new NexmoClient()
     .login(USER_JWT)
     .then(application => {
         ...
