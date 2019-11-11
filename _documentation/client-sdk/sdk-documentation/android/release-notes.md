@@ -85,7 +85,7 @@ navigation_weight: 0
 - remove `conversation.getEvents()`
 
 ### Fixed
-- `NexmoConversation` Parcelable fixed 
+- `NexmoConversation` `Parcelable` fixed 
 
 ## Version 1.0.0 - 2019-09-05
 
