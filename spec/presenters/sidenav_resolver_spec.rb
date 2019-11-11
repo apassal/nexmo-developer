@@ -139,7 +139,7 @@ RSpec.describe SidenavResolver do
       result = subject.sort_navigation(structure)
       items = result[:children].map { |child| child[:title] }
 
-      expect(items).to eq(
+      expect(items).to match_array(
         [
           'concepts',
           'application',
