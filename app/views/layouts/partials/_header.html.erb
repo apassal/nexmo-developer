@@ -16,11 +16,8 @@
 
     <nav class="Nxd-header__nav">
       <a class="Nxd-main-header__link Vlt-M-plus" href="https://nexmo.com">Nexmo.com</a>
-      <a class="Nxd-main-header__link Vlt-M-plus" href="https://help.nexmo.com/hc/en-us"><%= t('.support') %></a>
-      <a class="Nxd-main-header__link Vlt-M-plus" href="https://dashboard.nexmo.com/sign-in"><%= t('.sign-in') %></a>
-
-      <a href="https://dashboard.nexmo.com/sign-up" class="Vlt-btn Vlt-btn--secondary" data-ab="try_button"><b>
-        <% ab_test(:try_button, t('.try-it'), t('.get_started')) do |s| %>
+      <a href="https://dashboard.nexmo.com/sign-up" class="Vlt-btn Vlt-btn--primary" data-ab="try_button"><b>
+        <% ab_test(:try_button, t('.try-it'), "< #{t('.try-it')} />", t('.get_an_api_key'), t('.start_building')) do |s| %>
           <%= s %>
         <% end %>
       </b></a>

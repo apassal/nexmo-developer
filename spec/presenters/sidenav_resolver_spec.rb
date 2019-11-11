@@ -24,7 +24,7 @@ RSpec.describe SidenavResolver do
 
     context 'with a document path' do
       it 'returns the files under the path' do
-        expect(subject.items.size).to eq(15)
+        expect(subject.items.size).to eq(16)
       end
     end
   end
@@ -68,7 +68,7 @@ RSpec.describe SidenavResolver do
     context 'with given navigation weight' do
       it 'returns the corresponding one' do
         item = { is_task?: true, title: 'messages' }
-        expect(subject.item_navigation_weight(item)).to eq(2)
+        expect(subject.item_navigation_weight(item)).to eq(1)
       end
     end
 
@@ -130,6 +130,7 @@ RSpec.describe SidenavResolver do
           { title: 'verify',                path: '_documentation/en/verify' },
           { title: 'vonage-business-cloud', path: '_documentation/en/vonage-business-cloud' },
           { title: 'redact',                path: '_documentation/en/redact' },
+          { title: 'reports',               path: '_documentation/en/reports' },
         ],
       }
     end
@@ -142,19 +143,20 @@ RSpec.describe SidenavResolver do
         [
           'concepts',
           'application',
-          'messaging',
           'messages',
-          'voice',
+          'messaging',
           'dispatch',
+          'voice',
           'verify',
           'number-insight',
-          'vonage-business-cloud',
           'conversation',
           'client-sdk',
           'numbers',
           'account',
-          'redact',
           'audit',
+          'redact',
+          'reports',
+          'vonage-business-cloud',
         ]
       )
     end

@@ -50,6 +50,7 @@ en:
     in-app-video: In-App Video
     messages: Messages API
     dispatch: Dispatch API
+    reports: Reports
     us-short-codes: US Short Codes
     sms: SMS
     mms: MMS
@@ -106,7 +107,8 @@ en:
         support: Support
         sign-in: Sign In
         try-it: Try it free
-        get_started: Get started now
+        get_an_api_key: Get an API key
+        start_building: Start building for free
 
   code_snippets:
     copy_to_clipboard: Copy to Clipboard

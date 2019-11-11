@@ -114,7 +114,7 @@ Option | Description | Required
 `name` | The name of the Conversation room. Names are namespaced to the application level. | Yes
 `musicOnHoldUrl` | A URL to the *mp3* file to stream to participants until the conversation starts. By default the conversation starts when the first person calls the virtual number associated with your Voice app. To stream this mp3 before the moderator joins the conversation, set *startOnEnter* to *false* for all users other than the moderator. | No
 `startOnEnter` | The default value of *true* ensures that the conversation starts when this caller joins conversation `name`. Set to *false* for attendees in a moderated conversation. | No
-`endOnExit` | For moderated conversations: Set to *true* so the conversation is ended when the moderator hangs up. The default value of *false* means the conversation is not terminated when a caller hangs up; the conversation ends when the last caller hangs up. | No
+`endOnExit` | Specifies whether a moderated conversation ends when the moderator hangs up. This is set to *false* by default, which means that the conversation only ends when the last remaining participant hangs up, regardless of whether the moderator is still on the call. Set `endOnExit` to *true* to terminate the conversation when the moderator hangs up. | No
 `record` | Set to *true* to record this conversation. For standard conversations, recordings start when one or more attendees connects to the conversation. For moderated conversations, recordings start when the moderator joins. That is, when an NCCO is executed for the named conversation where *startOnEnter* is set to *true*. When the recording is terminated, the URL you download the recording from is sent to the event URL. <br>By default audio is recorded in MP3 format. See the [recording](/voice/voice-api/guides/recording#file-formats) guide for more details | No
 `eventUrl` | Set the URL to the webhook endpoint Nexmo calls asynchronously on each of the [Call States](/voice/voice-api/guides/call-flow#call-states). | No
 `eventMethod` | Set the HTTP method used to make the request to `eventUrl`. The default value is POST. | No
@@ -145,6 +145,7 @@ Option | Description | Required
 `machineDetection` | Configure the behavior when Nexmo detects that a destination is an answerphone. Set to either: <ul class="Vlt-list Vlt-list--simple"><li>`continue` - Nexmo sends an HTTP request to `event_url` with the Call event `machine`</li><li>`hangup` - end the Call</li></ul>   | No
 `eventUrl` | Set the webhook endpoint that Nexmo calls asynchronously on each of the possible [Call States](/voice/voice-api/guides/call-flow#call-states). If `eventType` is set to `synchronous` the `eventUrl` can return an NCCO that overrides the current NCCO when a timeout occurs. | No
 `eventMethod` | The HTTP method Nexmo uses to make the request to <i>eventUrl</i>. The default value is `POST`. | No
+`ringbackTone` | A URL value that points to a `ringbackTone` to be played back on repeat to the caller, so they don't hear silence. The `ringbackTone` will automatically stop playing when the call is fully connected, It's not recommended to use this parameter when connecting to a phone endpoint as the carrier will supply their own `ringbackTone`. Example: `"ringbackTone":"http://example.com/ringbackTone.wav" }`.  | No
 
 ### Endpoint Types and Values
 
@@ -154,7 +155,7 @@ Value | Description
 -- | --
 `number` | The phone number to connect to in [E.164](https://en.wikipedia.org/wiki/E.164) format.
 `dtmfAnswer` | Set the digits that are sent to the user as soon as the Call is answered. The `*` and `#` digits are respected. You create pauses using `p`. Each pause is 500ms.
-`onAnswer` | A JSON object containing a required `url` key. The URL serves an NCCO to execute in the number being connected to, before that call is joined to your existing conversation. Optionally, the `ringback` key can be specified with a URL value that points to a ringtone to be played back to the caller, so they do not hear just silence. The ringtone will automatically stop playing when the call is fully connected. Example: `{“url”:"https://example.com/answer", "ringback":"http://example.com/ringtone.wav" }`.
+`onAnswer` | A JSON object containing a required `url` key. The URL serves an NCCO to execute in the number being connected to, before that call is joined to your existing conversation. Optionally, the `ringbackTone` key can be specified with a URL value that points to a `ringbackTone` to be played back on repeat to the caller, so they do not hear just silence. The `ringbackTone` will automatically stop playing when the call is fully connected. Example: `{"url":"https://example.com/answer", "ringbackTone":"http://example.com/ringbackTone.wav" }`. Please note, the key `ringback` is still supported.
 
 #### app - Connect the call to an app
 
@@ -209,7 +210,7 @@ You can use the following options to control a *talk* action:
 ## Stream
 The `stream` action allows you to send an audio stream to a Conversation
 
-By default, the talk action is synchronous. However, if you set *bargeIn* to *true* you must set an *input* action later in the NCCO stack.
+By default, the stream action is synchronous. However, if you set *bargeIn* to *true* you must set an *input* action later in the NCCO stack.
 
 The following NCCO example shows how to send an audio stream to a Conversation or Call:
 

@@ -1,16 +1,17 @@
 navigation_weight:
   application: 0
   messaging: 1
-  sms: 1
+  messages: 1
   voice: 3
-  verify: 5
-  number-insight: 6
-  messages: 2
-  dispatch: 4
+  verify: 3
+  number-insight: 4
+  dispatch: 2
   numbers: 98
   account: 99
+  audit: 100
   redact: 100
-  vonage-business-cloud: 7
+  reports: 101
+  vonage-business-cloud: 200
 
   smart-numbers: 1
   vbc-apis: 2
@@ -130,9 +131,13 @@ navigation_overrides:
   conversation:
     svg: 'message'
     svgColor: 'teal'
-    label: 'Dev Preview'
+    label: 'Beta'
     code-snippets:
       collapsible: false
+  reports:
+    svg: 'report'
+    svgColor: 'orange'
+    label: 'Beta'
   vonage-business-cloud:
     svg: 'telephone'
     svgColor: 'green'
