@@ -9,7 +9,9 @@ navigation_weight: 0
 ## Version 1.0.3 - 2019-11-20
 
 ###Changes
-- change signature of `NexmoClient.login()`, remove `NexmoRequestListener<NexmoUser>` parameter
+
+- change signature of `NexmoClient.login()`, remove `NexmoRequestListener<NexmoUser>` parameter:
+
 ```
     nexmoClient = new NexmoClient.Builder().build(context);
     nexmoClient.setConnectionListener(new NexmoConnectionListener() {
@@ -26,7 +28,9 @@ navigation_weight: 0
           });
     NexmoClient.login("MY_AUTH_TOKEN")
 ```
-- change signature of `NexmoPushEventListener.onIncomingCall()`, remove `MemberEvent` parameter
+
+- change signature of `NexmoPushEventListener.onIncomingCall()`, remove `MemberEvent` parameter:
+
 ```
     override public void onMessageReceived(@Nullable RemoteMessage message) {
     if (NexmoClient.isNexmoPushNotification(message.getData())) {
@@ -43,7 +47,9 @@ navigation_weight: 0
         }
     })
 ```
+
 ### Fixed
+
 - fix `NexmoConversation.sendAttachment` bug
 - fix `NexmoAttachmentEvent` received from backend
 - fix race condition bug cause drop calls
