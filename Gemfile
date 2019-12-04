@@ -105,7 +105,7 @@ gem 'octokit', require: false
 gem 'woothee'
 
 # Create beautiful JavaScript charts with one line of Ruby
-gem 'chartkick', '3.2.0'
+gem 'chartkick', '3.3.0'
 
 # The simplest way to group temporal data
 gem 'groupdate', '3.2.0'
@@ -139,6 +139,8 @@ gem 'countries'
 gem 'country_select', '~> 4.0'
 
 gem 'nexmo-oas-renderer', '~> 0.6.6', require: false
+
+gem 'smartling'
 
 # A/B Testing
 gem 'split', '~> 3.3.2', require: 'split/dashboard'
