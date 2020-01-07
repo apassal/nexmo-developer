@@ -159,7 +159,7 @@ navigation_weight: 0
         }
     }
 ```
-- Add `NexmoMember` parameter to `NexmoMemberEvent` with respect to the `NexmoMember` actioned by 
+- Add `NexmoMember` parameter to `NexmoMemberEvent` with respect to the `NexmoMember` acted on by: 
 
 ```
     NexmoConversation myConversation;
